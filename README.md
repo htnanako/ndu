@@ -17,7 +17,7 @@
 
 - Docker Cli
 ```shell
-docker run -itd --name=ndu -v /path/to/ndu:/data -p 5050:5050 htnanako/ndu:latest
+docker run -itd --name=ndu -v /path/to/ndu:/data -p 5050:5050 -e HUB_PROXY=http://127.0.0.1:6152 htnanako/ndu:latest
 ```
 
 - Docker Compose
@@ -32,6 +32,8 @@ services:
       - 5050:5050
     volumes:
       - ./:/data
+    environment:
+      HUB_PROXY: http://127.0.0.1:6152 # 访问DOCKERHUB使用的代理，支持http,sock5
 ```
 
 ### Configuration
