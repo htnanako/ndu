@@ -1,4 +1,4 @@
-# NDU
+# NDU(Notify Docker Update)
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/htnanako/ndu)
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/htnanako/ndu/latest)
@@ -7,7 +7,7 @@
 
 # About
 
-### 本项目用于监测Dockerhub的容器更新，并推送通知提醒。
+### 本项目用于监测Dockerhub的镜像更新，并推送通知提醒。
 ### 支持多通知渠道(bark,telegram,企业微信)
 ### 支持多镜像多tag同时监测
 
@@ -73,6 +73,11 @@ notify:
 images:
 - htnanako/ndu:latest # 填写需要监测的镜像名:tag，如不加tag默认为latest，多个镜像按相同格式一行一个
 ```
+
+## TODO
+- [ ] 增加测试程序接口
+- [ ] 自定义通知内容
+- [ ] 增加监控Github Repo Release监控功能
 
 
 ## 支持一下
