@@ -43,6 +43,10 @@ services:
 > 在映射路径下找到conf/base_config.yml文件
 > 
 > 自动生成的配置文件如下所示
+>
+> 根据注释内容配置好文件保存后启动容器
+>
+> 每次启动容器，会`立刻执行`一次定时任务
 
 ```yaml
 ndu:
@@ -74,8 +78,26 @@ images:
 - htnanako/ndu:latest # 填写需要监测的镜像名:tag，如不加tag默认为latest，多个镜像按相同格式一行一个
 ```
 
+### 测试程序
+```shell
+curl --request GET \
+  --url http://127.0.0.1:5050/api/test # 根据实际情况填写IP:PORT
+```
+
+或者浏览器直接访问`http://127.0.0.1:5050/api/test` # 根据实际情况填写IP:PORT
+
+正常的响应：
+```json
+{
+  "success": true,
+  "errorCode": 0,
+  "message": "测试成功。"
+}
+```
+同时设定好的通知渠道会收到测试通知
+
 ## TODO
-- [ ] 增加测试程序接口
+- [x] 增加测试程序接口
 - [ ] 自定义通知内容
 - [ ] 增加监控Github Repo Release监控功能
 
