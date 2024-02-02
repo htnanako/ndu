@@ -25,3 +25,5 @@ notify:
     proxy: '' # 留空则不使用代理。支持通过HTTP代理、SOCKS代理发送消息。示范：http://localhost:8030 或 socks5://user:pass@host:port
 images:
 - htnanako/ndu:latest # 填写需要监测的镜像名:tag，如不加tag默认为latest，多个镜像按相同格式一行一个
+github_repos:
+- htnanako/ndu # 填写需要检测的Github仓库名，多个仓库按相同格式一行一个

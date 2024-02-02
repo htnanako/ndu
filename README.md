@@ -8,8 +8,9 @@
 # About
 
 ### 本项目用于监测Dockerhub的镜像更新，并推送通知提醒。
+### 同时支持Github Release更新监控。
 ### 支持多通知渠道(bark,telegram,企业微信)
-### 支持多镜像多tag同时监测
+### 支持多镜像、多tag、多GithubRepo同时监测
 
 # Start
 
@@ -76,6 +77,8 @@ notify:
     proxy: '' # 留空则不使用代理。支持通过HTTP代理、SOCKS代理发送消息。示范：http://localhost:8030 或 socks5://user:pass@host:port
 images:
 - htnanako/ndu:latest # 填写需要监测的镜像名:tag，如不加tag默认为latest，多个镜像按相同格式一行一个
+github_repos:
+- htnanako/ndu # 填写需要检测的Github仓库名，多个仓库按相同格式一行一个
 ```
 
 ### 测试程序
@@ -98,8 +101,8 @@ curl --request GET \
 
 ## TODO
 - [x] 增加测试程序接口
+- [x] 增加Github Repo Release监控功能
 - [ ] 自定义通知内容
-- [ ] 增加监控Github Repo Release监控功能
 
 
 ## 支持一下
