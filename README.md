@@ -58,7 +58,8 @@ ndu:
   notify: bark,telegram,qywx # 通知渠道，可选bark,telegram,qywx，多个渠道用逗号分隔
 notify:
   public:
-    notify_img: '' # 通知图片，有需要可自定义，也可不填
+    dockerhub_notify_img: '' # Dockerhub更新通知图片，有需要可自定义，不填使用系统默认图
+    github_notify_img: '' # GitHub更新通知图片，有需要可自定义，不填使用系统默认图
   qywx:
     qywx_base_url: https://qyapi.weixin.qq.com # 企业微信API地址，有需要可自定义
     corpid: '' # 企业微信corpid
