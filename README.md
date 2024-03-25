@@ -86,6 +86,24 @@ github_repos:
 - 勾选`repo`权限。
 - 点击`Generate token`，复制生成的token填入配置文件中的github_token字段。
 
+### 测试程序
+```shell
+curl --request GET \
+  --url http://127.0.0.1:5050/api/test # 根据实际情况填写IP:PORT
+```
+
+或者浏览器直接访问`http://127.0.0.1:5050/api/test` # 根据实际情况填写IP:PORT
+
+正常的响应：
+```json
+{
+  "success": true,
+  "errorCode": 0,
+  "message": "测试成功。"
+}
+```
+同时设定好的通知渠道会收到测试通知
+
 
 ## TODO
 - [x] 增加测试程序接口
