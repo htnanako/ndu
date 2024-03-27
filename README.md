@@ -104,15 +104,33 @@ curl --request GET \
 ```
 同时设定好的通知渠道会收到测试通知
 
+### 通知模板
+
+程序已内置通知模板，如有需要可自行修改。
+使用Jinja2模板语法，具体语法可参考[Jinja2](https://docs.jinkan.org/docs/jinja2/)。
+#### 内置变量
+| 变量名 |           描述            |
+|:---:|:-----------------------:|
+| image_name |    镜像名，仅docker更新推送可用    |
+| image_tag |   镜像tag，仅docker更新推送可用   |
+| image_update_time |  镜像更新时间，仅docker更新推送可用   |
+| image_platform |   镜像平台，仅docker更新推送可用    |
+| image_platform | 镜像SHA256值，仅docker更新推送可用 |
+|  |  |
+| repo_name |   仓库名，仅github更新推送可用    |
+| release_version |  发布版本，仅github更新推送可用   |
+| release_time |  发布时间，仅github更新推送可用   |
+| release_log |  发布日志，仅github更新推送可用   |
+
 
 ## TODO
 - [x] 增加测试程序接口
 - [x] 增加Github Repo Release监控功能
-- [ ] 自定义通知内容
+- [x] 支持jinja2模板语法自定义通知内容
 
 
 ## 支持一下
 
-你可以送我一杯咖啡，以表示对这个项目的支持😉
+你可以请我喝一杯咖啡，以表示对这个项目的支持😉
 
-<img src="https://nanako-1253183981.cos.ap-guangzhou.myqcloud.com/public-IMG/bmc_qr.png" width="300" />
+<img src="https://ossapi.ainnk.vip/public/images/MovieBot_Plugins/donate/nanako_qrcode.jpg" width="300" />
